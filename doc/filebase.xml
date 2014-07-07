@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<filebase>
+    <meta>
+        <version>
+            <major>0</major>
+            <minor>0</minor>
+            <patch>0</patch>
+        </version>
+    </meta>
+
+    <properties>
+        <property id="0">
+            <name>Author</name>
+        </property>
+        
+        <property id="1">
+            <name>Genre</name>
+        </property>
+
+        <property id="2">
+            <name>Year</name>
+        </property>
+
+        <property id="3">
+            <name>Language</name>
+        </property>
+    </properties>
+
+    <files>
+        <file>
+            <name>The Rubáiyát of Omar Khayyám</name>
+            <path>rubaiyat.mobi</path>
+            <property pid="0">Omar Khayyám</property>
+            <property pid="1">Poetry</property>
+            <property pid="2">1889</property>
+            <property pid="3">English</property>
+        </file>
+        <file>
+            <name>Metro 2033</name>
+            <path>russian/metro2033.epub</path>
+            <property pid="0">Dmitry Glukhovsky</property>
+            <property pid="1">Post-apocalyptic</property>
+            <property pid="1">Science Fiction</property>
+            <property pid="2">2005</property>
+            <property pid="3">Russian</property>
+        </file>
+        <file>
+            <name>The Hitchhiker's Guide to the Galaxy</name>
+            <path>hg2g.pdf</path>
+            <property pid="0">Douglas Adams</property>
+            <property pid="1">Comedy</property>
+            <property pid="1">Science Fiction</property>
+            <property pid="2">1979</property>
+            <property pid="3">English</property>
+        </file>
+    </files>
+</filebase>
