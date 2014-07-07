@@ -14,5 +14,5 @@ License
 -------
 [The MIT License](COPYING)
 
-[fb]: doc/FileBase Specification.md
+[fb]: https://github.com/filebase/filebase-qt4/blob/master/doc/FileBase%20Specification.md
 [github]: https://github.com/filebase
