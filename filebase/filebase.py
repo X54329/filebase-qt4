@@ -56,15 +56,6 @@ def parse_values(fb):
 
 	return values
 
-def parse_filebase(path):
-	fb = {}
-	fb["doc"] = etree.parse(path)
-
-	fb["properties"] = parse_properties(fb)
-	fb["values"] = parse_values(fb)
-
-	return fb
-
 def build_XPath(fb, query_table):
 	XPath = "/filebase/files/file["
 
@@ -79,18 +70,3 @@ def build_XPath(fb, query_table):
 		XPath = XPath[:-5] + "]" # remove 'and ' at the end and add ']' to end
 
 	return XPath
-
-def query_files(fb, query_table):
-	doc = fb["doc"]
-	files = []
-
-	xpath = build_XPath(fb, query_table)	
-
-	for f in doc.xpath(xpath):
-		name = f.find("name").text
-		path = f.find("path").text
-		path.replace("/", os.sep)
-
-		files.append({"name": name, "path": path})
-
-	return files

@@ -1,5 +1,3 @@
-#! /usr/bin/python3
-
 # Copyright (C) 2014 Bora Mert Alper <boramalper@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,6 +92,10 @@ class winFiles(QtGui.QWidget):
 		layout = QtGui.QVBoxLayout(self)
 		layout.addWidget(scroll)
 
+		back_button = QtGui.QPushButton("Back")
+		back_button.clicked.connect(app.exit)
+		layout.addWidget(back_button)
+		
 	def gui_make_openFile(self, path):
 		def gui_openFile():
 			return os.system("xdg-open " + pipes.quote(path))
@@ -108,27 +110,3 @@ class winFiles(QtGui.QWidget):
 
 	def closeEvent(self, event):
 		sys.exit()
-
-def main():
-	app = QtGui.QApplication(sys.argv)
-
-	fb = filebase.parse_filebase("filebase.xml")
-
-	while True:
-		pwin = winProperties(fb, app)
-		pwin.show()
-		app.exec_()
-		pwin.hide()
-
-		files = pwin.getFiles()
-
-		fwin = winFiles(fb, app, files)
-		fwin.show()
-		app.exec_()
-		fwin.hide()
-	
-	return 0
-
-
-if __name__ == "__main__":
-	main()

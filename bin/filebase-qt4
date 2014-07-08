@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+import filebase_qt4
+
+filebase_qt4.main()
